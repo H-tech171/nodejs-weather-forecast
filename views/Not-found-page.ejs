@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+        
+        html{
+        min-height: 100%;
+        overflow: hidden;
+        }
+
+        body{
+        height: calc(100vh - 1em);
+        padding: 4em;
+        color: #ffe6ff;
+        font-family: 'Audiowide', monospace;    
+        background: linear-gradient(90deg,  rgba(0, 0, 77) 10%, rgba(77, 25, 77) 70%, rgba(230, 0, 230, 1) 170%);
+        }
+
+        .line-1{
+            position: relative;
+            top: 50%;  
+            /* width: 24em; */
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 230%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
+        }
+
+        .caret-animation{
+        animation: typewriter 4s steps(52) 1s 1 normal both,
+                   blinkTextCursor 500ms steps(52) infinite normal;
+        }
+
+
+        @keyframes typewriter{
+        from{width: 0;}
+        to{width: 16.5em;}
+        }
+
+        @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+        }
+        
+    </style>
+    
+ 
+
+<p class="line-1 caret-animation">404 Error: Page not found :( </p>
+
+
+</body>
+</html>
