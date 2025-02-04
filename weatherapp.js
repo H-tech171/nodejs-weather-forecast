@@ -9,7 +9,7 @@ const bodyparser = require('body-parser');
 const app = express();
 
 function capitalize(data){
-    data = data.charAt(0).toUpperCase() + data.slice(1);  //capitalizes the first letter of the string
+    data = data.charAt(0).toUpperCase() + data.slice(1);  
     return data;
 }
 
@@ -42,7 +42,7 @@ app.post("/", (req, res) => {
 
         weather_description = capitalize(wdata.weather[0].description);
 
-        weather_data = { weather_id: wdata.weather[0].id,   // can be used for mapping the openweather icons with the github weather icons found online
+        weather_data = { weather_id: wdata.weather[0].id,  
                          city: wdata.name,
                          country: wdata.sys.country,
                          temperature: wdata.main.temp,
@@ -58,8 +58,7 @@ app.post("/", (req, res) => {
         else {
             res.render("Not-found-page.ejs")
         }
-        // // res.send( 'temp: ' + temp);
-        // res.write('<h1> temp: ' + temp + '</h1><br><img src=' + wdata.main.icon +'/>');
+       
         })
     })} catch(err){
         res.render("Not-found-page.ejs");
